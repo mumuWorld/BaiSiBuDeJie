@@ -35,8 +35,16 @@
 //     [[UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[UITabBarController class], [UISplitViewController class]]] setBarTintColor:myTabbedNavBarColor];
 //    创建一个描述性的字典
     NSMutableDictionary *attribute = [NSMutableDictionary dictionary];
+//    设置字体颜色
     attribute[NSForegroundColorAttributeName] = [UIColor blackColor];
+    
     [item3 setTitleTextAttributes:attribute forState:UIControlStateSelected];
+    //    创建一个描述性的字典
+    NSMutableDictionary *attribute2 = [NSMutableDictionary dictionary];
+    //    设置字体大小  只有正常状态才有效。
+    attribute2[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    
+    [item3 setTitleTextAttributes:attribute2 forState:UIControlStateNormal];
     //会崩溃
 //    item3.title = @"test";
     
@@ -102,9 +110,9 @@
     [navCtrl1.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
     [navCtrl1.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
     UIViewController *vcCtrl = self.childViewControllers[2];
-    vcCtrl.tabBarItem.title = @"发布";
-    [vcCtrl.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
-    [vcCtrl.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
+//    vcCtrl.tabBarItem.title = @"发布";
+    [vcCtrl.tabBarItem setImage:[UIImage imageNamed:@"tabBar_publish_icon"]];
+    [vcCtrl.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]];
     UINavigationController *navCtrl2 = self.childViewControllers[3];
     navCtrl2.tabBarItem.title = @"关注";
     [navCtrl2.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
