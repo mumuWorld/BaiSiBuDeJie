@@ -16,7 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"MMEssenceViewController=%@",self);
     self.view.backgroundColor = [UIColor cyanColor];
     // Do any additional setup after loading the view.
 }

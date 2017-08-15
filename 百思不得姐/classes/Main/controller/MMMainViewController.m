@@ -12,7 +12,7 @@
 #import "MMFocusViewController.h"
 #import "MMMySelfViewController.h"
 #import "MMPublishViewController.h"
-
+#import "MMTabBar.h"
 @interface MMMainViewController ()
 
 @end
@@ -59,12 +59,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupTabBar];
+    
     [self addChildVC];
 
     [self setChildVCItem];
 
     MLog(@"tmp =");
 
+}
+- (void)setupTabBar
+{
+    MMTabBar *mTabBar = [[MMTabBar alloc] init];
+    //只读属性不可修改， 可以通过kvc 或者runtime修改。
+//    self.tabBar = mTabBar;
+    [self setValue:mTabBar forKeyPath:@"tabBar"];
+    MLog(@"mtabbar=%@",self.tabBar);
+    
 }
 - (void)addChildVC
 {
@@ -107,20 +118,27 @@
     
     UINavigationController *navCtrl1 = self.childViewControllers[1];
     navCtrl1.tabBarItem.title = @"新帖";
-    [navCtrl1.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
-    [navCtrl1.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
+    [navCtrl1.tabBarItem setImage:[UIImage imageNamed:@"tabBar_new_icon"]];
+    [navCtrl1.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"]];
     UIViewController *vcCtrl = self.childViewControllers[2];
 //    vcCtrl.tabBarItem.title = @"发布";
     [vcCtrl.tabBarItem setImage:[UIImage imageNamed:@"tabBar_publish_icon"]];
     [vcCtrl.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]];
+    //发布按钮太大，调整 但无法达到高亮状态，所以要自定义。
+//    自定义tabbar按钮思路： 调整系统tabbar上按钮位置，平均分成5等分，再把加号按钮显示在中间就好了。
+//    tabbar按钮位置有系统决定，我们自己不能决定，=》调整系统自带子控件位置=>自定义tabbar。
+//    验证一下系统什么时候把tabbar Button加到 self.tabar上面
+    vcCtrl.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+    
     UINavigationController *navCtrl2 = self.childViewControllers[3];
     navCtrl2.tabBarItem.title = @"关注";
-    [navCtrl2.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
-    [navCtrl2.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
+    [navCtrl2.tabBarItem setImage:[UIImage imageNamed:@"tabBar_friendTrends_icon"]];
+    [navCtrl2.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"]];
+    
     UINavigationController *navCtr3 = self.childViewControllers[4];
     navCtr3.tabBarItem.title = @"我";
-    [navCtr3.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
-    [navCtr3.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
+    [navCtr3.tabBarItem setImage:[UIImage imageNamed:@"tabBar_me_icon"]];
+    [navCtr3.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"]];
 //    第二种方法设置图片的渲染模式
     //    UIImage *image = [UIImage imageNamed:@"tabBar_essence_icon"];
     //    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
