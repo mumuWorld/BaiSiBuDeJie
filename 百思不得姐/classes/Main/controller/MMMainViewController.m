@@ -59,13 +59,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupTabBar];
+
     
     [self addChildVC];
 
     [self setChildVCItem];
 
-    MLog(@"tmp =");
+    [self setupTabBar];
+    NSLog(@"%@",self.tabBar.subviews);//验证子控件什么时候加载到tabbar上，
 
 }
 - (void)setupTabBar
@@ -73,6 +74,7 @@
     MMTabBar *mTabBar = [[MMTabBar alloc] init];
     //只读属性不可修改， 可以通过kvc 或者runtime修改。
 //    self.tabBar = mTabBar;
+    //
     [self setValue:mTabBar forKeyPath:@"tabBar"];
     MLog(@"mtabbar=%@",self.tabBar);
     
@@ -87,8 +89,8 @@
     UINavigationController *navCtrl2 = [[UINavigationController alloc] initWithRootViewController:focusVC];
     [self addChildViewController:navCtrl2];
     
-    MMPublishViewController *publishVC = [[MMPublishViewController alloc] init];
-    [self addChildViewController:publishVC];
+//    MMPublishViewController *publishVC = [[MMPublishViewController alloc] init];
+//    [self addChildViewController:publishVC];
     
     MMNewViewController *newVC = [[MMNewViewController alloc] init];
     UINavigationController *navCtrl3 = [[UINavigationController alloc] initWithRootViewController:newVC];
@@ -120,22 +122,24 @@
     navCtrl1.tabBarItem.title = @"新帖";
     [navCtrl1.tabBarItem setImage:[UIImage imageNamed:@"tabBar_new_icon"]];
     [navCtrl1.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"]];
-    UIViewController *vcCtrl = self.childViewControllers[2];
+//    UIViewController *vcCtrl = self.childViewControllers[2];
 //    vcCtrl.tabBarItem.title = @"发布";
-    [vcCtrl.tabBarItem setImage:[UIImage imageNamed:@"tabBar_publish_icon"]];
-    [vcCtrl.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]];
+//    [vcCtrl.tabBarItem setImage:[UIImage imageNamed:@"tabBar_publish_icon"]];
+//    [vcCtrl.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_publish_click_icon"]];
     //发布按钮太大，调整 但无法达到高亮状态，所以要自定义。
 //    自定义tabbar按钮思路： 调整系统tabbar上按钮位置，平均分成5等分，再把加号按钮显示在中间就好了。
 //    tabbar按钮位置有系统决定，我们自己不能决定，=》调整系统自带子控件位置=>自定义tabbar。
-//    验证一下系统什么时候把tabbar Button加到 self.tabar上面
-    vcCtrl.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+//   要在tabbaritem 添加到tabbar之前把自己的tabbar替换掉系统的tabbar
+//    所以要验证一下系统什么时候把tabbar Button加到 self.tabar上面
+//    经过测试，得知在willappear 中添加
+//    vcCtrl.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     
-    UINavigationController *navCtrl2 = self.childViewControllers[3];
+    UINavigationController *navCtrl2 = self.childViewControllers[2];
     navCtrl2.tabBarItem.title = @"关注";
     [navCtrl2.tabBarItem setImage:[UIImage imageNamed:@"tabBar_friendTrends_icon"]];
     [navCtrl2.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"]];
     
-    UINavigationController *navCtr3 = self.childViewControllers[4];
+    UINavigationController *navCtr3 = self.childViewControllers[3];
     navCtr3.tabBarItem.title = @"我";
     [navCtr3.tabBarItem setImage:[UIImage imageNamed:@"tabBar_me_icon"]];
     [navCtr3.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"]];
