@@ -7,6 +7,7 @@
 //
 
 #import "MMTabBar.h"
+#import "UIView+MMViewFrame.h"
 
 @interface MMTabBar()
 
@@ -19,7 +20,7 @@
 /**
  懒加载方式加载plus btn。
 
- @return <#return value description#>
+ @return
  */
 - (UIButton *)plusBtn
 {
@@ -63,7 +64,7 @@
         }
     }
 //    调整发布按钮的center
-    self.plusBtn.center = CGPointMake(self.frame.size.width *0.5, btnH *0.5);
+    self.plusBtn.center = CGPointMake(self.mm_weight *0.5, btnH *0.5);
     
 }
 

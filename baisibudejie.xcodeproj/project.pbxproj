@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4A802B31F3CAFB200F12C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A802B21F3CAFB200F12C53 /* Assets.xcassets */; };
+		B4C5CAB01F4C7D7B00D03ADF /* UIView+MMViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */; };
 		B4F8E9831F433D800085471B /* MMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F8E9821F433D800085471B /* MMTabBar.m */; };
 		B4FA8EC61F41DC59003ACB7A /* MMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FA8EC51F41DC59003ACB7A /* MMMainViewController.m */; };
 		B4FA8EC91F41DE20003ACB7A /* MMFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FA8EC81F41DE20003ACB7A /* MMFocusViewController.m */; };
@@ -25,6 +26,8 @@
 		B4A802B01F3CAFB200F12C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4A802B21F3CAFB200F12C53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A802B51F3CAFB200F12C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4C5CAAE1F4C7D7B00D03ADF /* UIView+MMViewFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MMViewFrame.h"; path = "Category/UIView+MMViewFrame.h"; sourceTree = "<group>"; };
+		B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MMViewFrame.m"; path = "Category/UIView+MMViewFrame.m"; sourceTree = "<group>"; };
 		B4F8E97E1F43332A0085471B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4F8E9811F433D800085471B /* MMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTabBar.h; path = Main/view/MMTabBar.h; sourceTree = "<group>"; };
 		B4F8E9821F433D800085471B /* MMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMTabBar.m; path = Main/view/MMTabBar.m; sourceTree = "<group>"; };
@@ -82,6 +85,15 @@
 				B4A802B41F3CAFB200F12C53 /* LaunchScreen.storyboard */,
 			);
 			path = "百思不得姐";
+			sourceTree = "<group>";
+		};
+		B4C5CAAD1F4C7D3800D03ADF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B4C5CAAE1F4C7D7B00D03ADF /* UIView+MMViewFrame.h */,
+				B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		B4F8E9801F433D5C0085471B /* view */ = {
@@ -260,6 +272,7 @@
 		B4FD20D71F3F046F00044F57 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				B4C5CAAD1F4C7D3800D03ADF /* Category */,
 				B4FD20D81F3F046F00044F57 /* AppDelegate.h */,
 				B4FD20D91F3F046F00044F57 /* AppDelegate.m */,
 				B49D491E1F3F303D006F7C09 /* PrefixHeader.pch */,
@@ -373,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4FA8ECC1F41DE4E003ACB7A /* MMMySelfViewController.m in Sources */,
+				B4C5CAB01F4C7D7B00D03ADF /* UIView+MMViewFrame.m in Sources */,
 				B4FD20E21F3F046F00044F57 /* main.m in Sources */,
 				B4FD20E01F3F046F00044F57 /* AppDelegate.m in Sources */,
 				B4FD20E51F3F04BE00044F57 /* MMEssenceViewController.m in Sources */,

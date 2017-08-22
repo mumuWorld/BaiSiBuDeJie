@@ -6,6 +6,12 @@
 //  Copyright © 2017年 mumu. All rights reserved.
 //
 
+/**
+    1.存放公用宏
+    2.存放公用头文件
+    3.自定义log
+ */
+
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
