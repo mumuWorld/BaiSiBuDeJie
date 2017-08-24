@@ -20,7 +20,8 @@
 {
     return self.frame.size.height;
 }
-- (void)setMm_Weight:(CGFloat)mm_weight
+
+- (void)setMm_weight:(CGFloat)mm_weight
 {
     CGRect rect = self.frame;
     rect.size.width = mm_weight;
@@ -30,6 +31,7 @@
 {
     return self.frame.size.width;
 }
+
 - (void)setMm_x:(CGFloat)mm_x
 {
     CGRect rect = self.frame;
@@ -40,6 +42,7 @@
 {
     return self.frame.origin.x;
 }
+
 - (void)setMm_y:(CGFloat)mm_y
 {
     CGRect rect = self.frame;
@@ -49,5 +52,18 @@
 - (CGFloat)mm_y
 {
     return self.frame.origin.y;
+}
++ (UIBarButtonItem *)itemWithImageName:(NSString *)normalImg with:(NSString *)HighImg Target:(id)target action:(SEL)action
+{
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBtn setImage:[UIImage imageNamed:normalImg] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:HighImg] forState:UIControlStateHighlighted];
+    [leftBtn sizeToFit];
+    [leftBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    UIView *contentView = [[UIView alloc] initWithFrame:leftBtn.bounds];
+    [contentView addSubview:leftBtn];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:contentView];
 }
 @end

@@ -46,11 +46,11 @@
 {
     [super layoutSubviews];
 //    布局tabbar button
-    NSLog(@"subview=%@",self.subviews);
+//    NSLog(@"subview=%@",self.subviews);
 //    items属性记录着 tabbar里面一共有多少个按钮
     NSUInteger count = self.items.count +1;
-    CGFloat btnW = self.frame.size.width/count;
-    CGFloat btnH = self.frame.size.height;
+    CGFloat btnW = self.mm_weight/count;
+    CGFloat btnH = self.mm_hight;
     
     NSInteger number = 0;
     for (UIView *tabbarButton in self.subviews) {

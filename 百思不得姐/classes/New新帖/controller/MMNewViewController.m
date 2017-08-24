@@ -16,9 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor randomColor];
+    [self setupNaviBarItem];
     // Do any additional setup after loading the view.
 }
-
+- (void)setupNaviBarItem
+{
+    UIBarButtonItem *btnItem = [UITabBarItem itemWithImageName:@"nav_item_game_icon" with:@"nav_item_game_click_icon" Target:self action:@selector(leftBtnClick)];
+    self.navigationItem.leftBarButtonItem = btnItem;
+    
+    UIBarButtonItem *btnItem2 = [UITabBarItem itemWithImageName:@"navigationButtonRandom" with:@"navigationButtonRandomClick" Target:self action:@selector(rightBtnClick)];
+    self.navigationItem.rightBarButtonItem = btnItem2;
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+}
+- (void)leftBtnClick
+{
+    MMfunc;
+}
+- (void)rightBtnClick
+{
+    MMfunc;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
