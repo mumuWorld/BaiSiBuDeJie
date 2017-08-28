@@ -27,8 +27,8 @@
     
     UIBarButtonItem *btnItem2 = [UITabBarItem itemWithImageName:@"navigationButtonRandom" with:@"navigationButtonRandomClick" Target:self action:@selector(rightBtnClick)];
     self.navigationItem.rightBarButtonItem = btnItem2;
-    
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.title = @"我的关注";
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
 }
 - (void)leftBtnClick
 {

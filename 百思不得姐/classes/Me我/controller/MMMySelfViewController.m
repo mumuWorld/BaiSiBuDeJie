@@ -28,8 +28,10 @@
     UIBarButtonItem *btnItem2 = [UITabBarItem itemWithImageName:@"navigationButtonRandom" with:@"navigationButtonRandomClick" Target:self action:@selector(rightBtnClick)];
     
     self.navigationItem.rightBarButtonItems = @[btnItem,btnItem2];
-    
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.title = @"我的";
+//    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+//    设置导航栏标题 字体。要在UINavigationBar设置， 叫做富文本设置。
+
 }
 - (void)leftBtnClick
 {

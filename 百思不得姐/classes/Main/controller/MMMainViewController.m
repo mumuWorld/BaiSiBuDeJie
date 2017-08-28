@@ -13,6 +13,8 @@
 #import "MMMySelfViewController.h"
 #import "MMPublishViewController.h"
 #import "MMTabBar.h"
+//为了设置navigationbar 样式，自定义。方便管理
+#import "MMNavigationViewController.h"
 @interface MMMainViewController ()
 
 @end
@@ -82,22 +84,23 @@
 - (void)addChildVC
 {
     MMEssenceViewController *essenceVC = [[MMEssenceViewController alloc] init];
-    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:essenceVC];
+    MMNavigationViewController *navCtrl = [[MMNavigationViewController alloc] initWithRootViewController:essenceVC];
     [self addChildViewController:navCtrl];
     
-    MMFocusViewController *focusVC = [[MMFocusViewController alloc] init];
-    UINavigationController *navCtrl2 = [[UINavigationController alloc] initWithRootViewController:focusVC];
-    [self addChildViewController:navCtrl2];
+    MMNewViewController *newVC = [[MMNewViewController alloc] init];
+    MMNavigationViewController *navCtrl3 = [[MMNavigationViewController alloc] initWithRootViewController:newVC];
+    [self addChildViewController:navCtrl3];
+
     
 //    MMPublishViewController *publishVC = [[MMPublishViewController alloc] init];
 //    [self addChildViewController:publishVC];
+    MMFocusViewController *focusVC = [[MMFocusViewController alloc] init];
+    MMNavigationViewController *navCtrl2 = [[MMNavigationViewController alloc] initWithRootViewController:focusVC];
+    [self addChildViewController:navCtrl2];
     
-    MMNewViewController *newVC = [[MMNewViewController alloc] init];
-    UINavigationController *navCtrl3 = [[UINavigationController alloc] initWithRootViewController:newVC];
-    [self addChildViewController:navCtrl3];
     
     MMMySelfViewController *myselfVC = [[MMMySelfViewController alloc] init];
-    UINavigationController *navCtrl4 = [[UINavigationController alloc] initWithRootViewController:myselfVC];
+    MMNavigationViewController *navCtrl4 = [[MMNavigationViewController alloc] initWithRootViewController:myselfVC];
     [self addChildViewController:navCtrl4];
 }
 

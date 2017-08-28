@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B40660231F54D78100D5B321 /* MMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40660221F54D78100D5B321 /* MMNavigationViewController.m */; };
 		B46022FB1F4F1ADE00EF95A1 /* UIColor+MMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B46022FA1F4F1ADE00EF95A1 /* UIColor+MMColor.m */; };
 		B46022FE1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B46022FD1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m */; };
 		B4A802B31F3CAFB200F12C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A802B21F3CAFB200F12C53 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B40660211F54D78100D5B321 /* MMNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMNavigationViewController.h; path = Main/controller/MMNavigationViewController.h; sourceTree = "<group>"; };
+		B40660221F54D78100D5B321 /* MMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMNavigationViewController.m; path = Main/controller/MMNavigationViewController.m; sourceTree = "<group>"; };
 		B46022F91F4F1ADE00EF95A1 /* UIColor+MMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MMColor.h"; path = "Category/UIColor+MMColor.h"; sourceTree = "<group>"; };
 		B46022FA1F4F1ADE00EF95A1 /* UIColor+MMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MMColor.m"; path = "Category/UIColor+MMColor.m"; sourceTree = "<group>"; };
 		B46022FC1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITabBarItem+MMTabBarItem.h"; path = "Category/UITabBarItem+MMTabBarItem.h"; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 			children = (
 				B4FA8EC41F41DC59003ACB7A /* MMMainViewController.h */,
 				B4FA8EC51F41DC59003ACB7A /* MMMainViewController.m */,
+				B40660211F54D78100D5B321 /* MMNavigationViewController.h */,
+				B40660221F54D78100D5B321 /* MMNavigationViewController.m */,
 			);
 			name = contorller;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				B4FD20E51F3F04BE00044F57 /* MMEssenceViewController.m in Sources */,
 				B4FA8ED21F41DE67003ACB7A /* MMPublishViewController.m in Sources */,
 				B46022FE1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m in Sources */,
+				B40660231F54D78100D5B321 /* MMNavigationViewController.m in Sources */,
 				B4FA8ECF1F41DE5C003ACB7A /* MMNewViewController.m in Sources */,
 				B4FA8EC61F41DC59003ACB7A /* MMMainViewController.m in Sources */,
 				B4F8E9831F433D800085471B /* MMTabBar.m in Sources */,
@@ -530,6 +536,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mumu.world.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,6 +551,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mumu.world.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
