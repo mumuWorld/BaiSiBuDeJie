@@ -16,7 +16,7 @@
 @implementation MMMySelfViewController
 
 /**
- 搭建基本结构-> 设置底部条->设置顶部条->设置顶部条标题字体->处理导航控制器业务跳转
+ 搭建基本结构-> 设置底部条->设置顶部条->设置顶部条标题字体->处理导航控制器业务跳转->统一设置返回按钮
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +28,9 @@
 - (void)setupNaviBarItem
 {
 //    UIBarButtonItem *btnItem = [UITabBarItem itemWithImageName:@"nav_item_game_icon" with:@"nav_item_game_click_icon" Target:self action:@selector(leftBtnClick)];
-    UIBarButtonItem *btnItem = [UITabBarItem itemStausWith:@"mine-moon-icon" with:@"mine-moon-icon-click" Target:self action:@selector(leftBtnClick:)];
+    UIBarButtonItem *btnItem = [UIBarButtonItem itemStausWith:@"mine-moon-icon" with:@"mine-moon-icon-click" Target:self action:@selector(leftBtnClick:)];
     
-    UIBarButtonItem *btnItem2 = [UITabBarItem itemWithImageName:@"mine-setting-icon" with:@"mine-setting-icon-click" Target:self action:@selector(rightBtnClick)];
+    UIBarButtonItem *btnItem2 = [UIBarButtonItem itemWithImageName:@"mine-setting-icon" with:@"mine-setting-icon-click" Target:self action:@selector(rightBtnClick)];
     
     self.navigationItem.rightBarButtonItems = @[btnItem2,btnItem];
     self.navigationItem.title = @"我的";

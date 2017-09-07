@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		B40660231F54D78100D5B321 /* MMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40660221F54D78100D5B321 /* MMNavigationViewController.m */; };
 		B46022FB1F4F1ADE00EF95A1 /* UIColor+MMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B46022FA1F4F1ADE00EF95A1 /* UIColor+MMColor.m */; };
-		B46022FE1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B46022FD1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m */; };
 		B4A802B31F3CAFB200F12C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A802B21F3CAFB200F12C53 /* Assets.xcassets */; };
 		B4C5CAB01F4C7D7B00D03ADF /* UIView+MMViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */; };
+		B4D354C91F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D354C81F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.m */; };
 		B4DF3CA01F5614E3008D14DD /* MMSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DF3C9F1F5614E3008D14DD /* MMSettingTableViewController.m */; };
 		B4F8E9831F433D800085471B /* MMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F8E9821F433D800085471B /* MMTabBar.m */; };
 		B4FA8EC61F41DC59003ACB7A /* MMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FA8EC51F41DC59003ACB7A /* MMMainViewController.m */; };
@@ -29,8 +29,6 @@
 		B40660221F54D78100D5B321 /* MMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMNavigationViewController.m; path = Main/controller/MMNavigationViewController.m; sourceTree = "<group>"; };
 		B46022F91F4F1ADE00EF95A1 /* UIColor+MMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+MMColor.h"; path = "Category/UIColor+MMColor.h"; sourceTree = "<group>"; };
 		B46022FA1F4F1ADE00EF95A1 /* UIColor+MMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MMColor.m"; path = "Category/UIColor+MMColor.m"; sourceTree = "<group>"; };
-		B46022FC1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITabBarItem+MMTabBarItem.h"; path = "Category/UITabBarItem+MMTabBarItem.h"; sourceTree = "<group>"; };
-		B46022FD1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITabBarItem+MMTabBarItem.m"; path = "Category/UITabBarItem+MMTabBarItem.m"; sourceTree = "<group>"; };
 		B49D491E1F3F303D006F7C09 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B4A802A31F3CAFB200F12C53 /* baisibudejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baisibudejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A802B01F3CAFB200F12C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +36,8 @@
 		B4A802B51F3CAFB200F12C53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4C5CAAE1F4C7D7B00D03ADF /* UIView+MMViewFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MMViewFrame.h"; path = "Category/UIView+MMViewFrame.h"; sourceTree = "<group>"; };
 		B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MMViewFrame.m"; path = "Category/UIView+MMViewFrame.m"; sourceTree = "<group>"; };
+		B4D354C71F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+MMBarBtnItem.h"; path = "Category/UIBarButtonItem+MMBarBtnItem.h"; sourceTree = "<group>"; };
+		B4D354C81F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+MMBarBtnItem.m"; path = "Category/UIBarButtonItem+MMBarBtnItem.m"; sourceTree = "<group>"; };
 		B4DF3C9E1F5614E3008D14DD /* MMSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingTableViewController.h; sourceTree = "<group>"; };
 		B4DF3C9F1F5614E3008D14DD /* MMSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingTableViewController.m; sourceTree = "<group>"; };
 		B4F8E97E1F43332A0085471B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 				B4C5CAAF1F4C7D7B00D03ADF /* UIView+MMViewFrame.m */,
 				B46022F91F4F1ADE00EF95A1 /* UIColor+MMColor.h */,
 				B46022FA1F4F1ADE00EF95A1 /* UIColor+MMColor.m */,
-				B46022FC1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.h */,
-				B46022FD1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m */,
+				B4D354C71F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.h */,
+				B4D354C81F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -440,11 +440,11 @@
 				B4FA8ECC1F41DE4E003ACB7A /* MMMySelfViewController.m in Sources */,
 				B46022FB1F4F1ADE00EF95A1 /* UIColor+MMColor.m in Sources */,
 				B4C5CAB01F4C7D7B00D03ADF /* UIView+MMViewFrame.m in Sources */,
+				B4D354C91F619DB900D2271B /* UIBarButtonItem+MMBarBtnItem.m in Sources */,
 				B4FD20E21F3F046F00044F57 /* main.m in Sources */,
 				B4FD20E01F3F046F00044F57 /* AppDelegate.m in Sources */,
 				B4FD20E51F3F04BE00044F57 /* MMEssenceViewController.m in Sources */,
 				B4FA8ED21F41DE67003ACB7A /* MMPublishViewController.m in Sources */,
-				B46022FE1F4F1EAC00EF95A1 /* UITabBarItem+MMTabBarItem.m in Sources */,
 				B40660231F54D78100D5B321 /* MMNavigationViewController.m in Sources */,
 				B4FA8ECF1F41DE5C003ACB7A /* MMNewViewController.m in Sources */,
 				B4FA8EC61F41DC59003ACB7A /* MMMainViewController.m in Sources */,

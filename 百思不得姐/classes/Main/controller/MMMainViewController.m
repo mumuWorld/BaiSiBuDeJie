@@ -68,7 +68,7 @@
     [self setChildVCItem];
 
     [self setupTabBar];
-    NSLog(@"%@",self.tabBar.subviews);//验证子控件什么时候加载到tabbar上，
+//    NSLog(@"%@",self.tabBar.subviews);//验证子控件什么时候加载到tabbar上，
 
 }
 - (void)setupTabBar

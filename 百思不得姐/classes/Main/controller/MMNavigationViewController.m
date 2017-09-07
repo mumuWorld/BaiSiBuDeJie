@@ -26,6 +26,22 @@
     //必须要用default 
     [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
+
+//统一设置返回按钮，需要监听导航控制器push操作，然后再下个控制器设置返回按钮
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.childViewControllers.count > 0) {
+        //设置返回按钮
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemBackWithNormalImg:@"navigationButtonReturn" highImg:@"navigationButtonReturnClick" Target:self action:@selector(back) title:@"返回"];
+    }
+    
+    //真正的跳转
+    [super pushViewController:viewController animated:animated];
+}
+- (void)back
+{
+    [self popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

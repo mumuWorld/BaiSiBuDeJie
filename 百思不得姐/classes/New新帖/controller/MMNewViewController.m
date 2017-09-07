@@ -22,10 +22,10 @@
 }
 - (void)setupNaviBarItem
 {
-    UIBarButtonItem *btnItem = [UITabBarItem itemWithImageName:@"nav_item_game_icon" with:@"nav_item_game_click_icon" Target:self action:@selector(leftBtnClick)];
+    UIBarButtonItem *btnItem = [UIBarButtonItem itemWithImageName:@"nav_item_game_icon" with:@"nav_item_game_click_icon" Target:self action:@selector(leftBtnClick)];
     self.navigationItem.leftBarButtonItem = btnItem;
     
-    UIBarButtonItem *btnItem2 = [UITabBarItem itemWithImageName:@"navigationButtonRandom" with:@"navigationButtonRandomClick" Target:self action:@selector(rightBtnClick)];
+    UIBarButtonItem *btnItem2 = [UIBarButtonItem itemWithImageName:@"navigationButtonRandom" with:@"navigationButtonRandomClick" Target:self action:@selector(rightBtnClick)];
     self.navigationItem.rightBarButtonItem = btnItem2;
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];

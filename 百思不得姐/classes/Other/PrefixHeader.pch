@@ -15,7 +15,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "UITabBarItem+MMTabBarItem.h"
+#import "UIBarButtonItem+MMBarBtnItem.h"
 #import "UIColor+MMColor.h"
 
 #define MMfunc MLog(@"%s",__func__)
