@@ -10,4 +10,8 @@
 
 @interface UITabBarItem (MMTabBarItem)
 + (UIBarButtonItem *)itemWithImageName:(NSString *)normalImg with:(NSString *)HighImg Target:(id)target action:(SEL)action;
+/**
+    设置选择状态item
+ */
++ (UIBarButtonItem *)itemStausWith:(NSString *)normalImg with:(NSString *)OtherImg Target:(id)target action:(SEL)action;
 @end

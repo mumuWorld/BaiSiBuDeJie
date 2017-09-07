@@ -22,4 +22,18 @@
     
     return [[UIBarButtonItem alloc] initWithCustomView:contentView];
 }
++ (UIBarButtonItem *)itemStausWith:(NSString *)normalImg with:(NSString *)OtherImg Target:(id)target action:(SEL)action
+{
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBtn setImage:[UIImage imageNamed:normalImg] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:OtherImg] forState:UIControlStateSelected];
+    [leftBtn sizeToFit];
+    [leftBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    UIView *contentView = [[UIView alloc] initWithFrame:leftBtn.bounds];
+    [contentView addSubview:leftBtn];
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:contentView];
+}
+
 @end
