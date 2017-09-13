@@ -8,7 +8,7 @@
 
 #import "MMNavigationViewController.h"
 
-@interface MMNavigationViewController ()
+@interface MMNavigationViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -31,6 +31,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.childViewControllers.count > 0) {
+//        恢复滑动返回功能->分析：把系统的返回按钮覆盖->1.手势失效（1，手势被清空，2，可能有手势代理出问题）
         //设置返回按钮
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemBackWithNormalImg:@"navigationButtonReturn" highImg:@"navigationButtonReturnClick" Target:self action:@selector(back) title:@"返回"];
     }
@@ -44,9 +45,20 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+//    验证一下时候有代理
+    MLog(@"delegate=%@",self.interactivePopGestureRecognizer.delegate);
+//    delegate=<_UINavigationInteractiveTransition
+    
+//    设置代理为nil 会使程序在跟控制器时造成假死状态，不可取，采用重写代理方法。
+//    self.interactivePopGestureRecognizer.delegate = nil
+    self.interactivePopGestureRecognizer.delegate = self;
 
+}
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return self.childViewControllers.count >1;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
