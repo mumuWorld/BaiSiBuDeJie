@@ -34,6 +34,10 @@
 //        恢复滑动返回功能->分析：把系统的返回按钮覆盖->1.手势失效（1，手势被清空，2，可能有手势代理出问题）
         //设置返回按钮
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemBackWithNormalImg:@"navigationButtonReturn" highImg:@"navigationButtonReturnClick" Target:self action:@selector(back) title:@"返回"];
+//        NSLog(@"pan=%@",self.interactivePopGestureRecognizer);
+      /**
+       pan=<UIScreenEdgePanGestureRecognizer: 0x7f9e52511240; state = Possible; enabled = NO; delaysTouchesBegan = YES; view = <UILayoutContainerView 0x7f9e5250f920>; target= <(action=handleNavigationTransition:, target=<_UINavigationInteractiveTransition 0x7f9e52510d20>)>>
+       */
     }
     
     //真正的跳转
@@ -46,12 +50,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    验证一下时候有代理
-    MLog(@"delegate=%@",self.interactivePopGestureRecognizer.delegate);
+//    MLog(@"delegate=%@",self.interactivePopGestureRecognizer.delegate);
 //    delegate=<_UINavigationInteractiveTransition
     
 //    设置代理为nil 会使程序在跟控制器时造成假死状态，不可取，采用重写代理方法。
 //    self.interactivePopGestureRecognizer.delegate = nil
-    self.interactivePopGestureRecognizer.delegate = self;
+//    self.interactivePopGestureRecognizer.delegate = self;
+    
+//    UIScreenEdgePanGestureRecognizer
+//    为什么我们的导航控制器手势不是全屏滑动
+//    全屏滑动返回优化
+    UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:panGes];
+    panGes.delegate = self;
+//    禁止自己的边缘手势
+    self.interactivePopGestureRecognizer.enabled = NO;
 
 }
 #pragma mark - UIGestureRecognizerDelegate
